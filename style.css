@@ -1,0 +1,180 @@
+:root {
+  --primaire: #9356DC ;
+  --secondaire:#FF79DA ;
+  --tertiaire: #99E2D0;
+}
+
+body {
+  margin: 0px;
+  font-family: Roboto, sans-serif;
+}
+
+header {
+  padding: 0.5rem;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+header img {
+  width: 150px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px 0px;
+}
+
+.loca {
+  display: flex;
+  justify-content: center;
+  padding: 1.25rem 1rem;
+  background-color: #e5e2e2;
+  font-size: 1rem;
+}
+.loca i {
+  margin-right: 15px;
+}
+.loca span {
+  opacity: 0.8;
+  font-weight: 700;
+}
+
+.exploration {
+  padding: 15px 36px;
+  text-align: center;
+  background-color: #f3f3f3;
+}
+.exploration h3 {
+  font-weight: 700;
+  font-size: 1.5em;
+  margin-bottom: 15px;
+}
+.exploration p {
+  opacity: 0.5;
+  margin-bottom: 26px;
+}
+.exploration button {
+  margin-bottom: 36px;
+}
+
+button {
+  border: 0;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 100px;
+  color: #fff;
+  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  cursor: pointer;
+}
+
+.fontionnement {
+  padding: 1rem;
+  font-weight: bold;
+}
+.fontionnement ol {
+  counter-reset: listButton;
+  padding: 10px 0px;
+}
+.fontionnement li {
+  list-style-type: none;
+  background: #f6f6f6;
+  display: flex;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.1333333333);
+  position: relative;
+  border-radius: 15px;
+  margin: 24px 10px;
+}
+.fontionnement li::before {
+  counter-increment: listButton;
+  content: counters(listButton, ".") " ";
+  background-color: #9356DC;
+  color: white;
+  border-radius: 30px;
+  display: flex;
+  height: 30px;
+  width: 30px;
+  justify-content: center;
+  position: absolute;
+  margin-right: 15px;
+  align-items: center;
+  left: -0.5rem;
+}
+.fontionnement li:hover {
+  background-color: rgb(250, 232, 248);
+}
+.fontionnement i {
+  color: grey;
+  padding: 0px 16px;
+  font-size: 20px;
+}
+
+.restaurants {
+  padding: 15px;
+  background-color: #f6f6f6;
+}
+.restaurants .card {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  border-radius: 18px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  margin-bottom: 24px;
+}
+.restaurants img {
+  height: 180px;
+  width: 100%;
+  object-fit: cover;
+}
+.restaurants .new {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  padding: 7px 10px;
+  background: var(--tertiaire);
+  color: green;
+  border-radius: 2px;
+  font-size: 0.8rem;
+}
+.restaurants .article_content {
+  margin: 18px 10px;
+  color: black;
+}
+.restaurants .article_content h3 {
+  margin: 0px;
+}
+.restaurants .article_content p {
+  margin: 6px 0px;
+}
+.restaurants .article_content i {
+  font-size: 32px;
+  position: absolute;
+  bottom: 30px;
+  right: 16px;
+}
+.restaurants .article_content i:hover {
+  font-weight: 600;
+  color: #9356DC;
+}
+
+footer {
+  background-color: rgba(0, 0, 0, 0.7058823529);
+  color: white;
+  padding-left: 16px;
+}
+footer h4 {
+  font-family: Shrikhand;
+  font-size: 1.3rem;
+  padding-top: 16px;
+}
+footer ul {
+  list-style-type: none;
+  padding-left: 0px;
+}
+footer li {
+  padding-bottom: 10px;
+}
+
+/*# sourceMappingURL=style.css.map */
