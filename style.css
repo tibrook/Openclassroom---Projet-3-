@@ -65,15 +65,15 @@ button {
   cursor: pointer;
 }
 
-.fontionnement {
+.fonctionnement {
   padding: 1rem;
   font-weight: bold;
 }
-.fontionnement ol {
+.fonctionnement ol {
   counter-reset: listButton;
   padding: 10px 0px;
 }
-.fontionnement li {
+.fonctionnement li {
   list-style-type: none;
   background: #f6f6f6;
   display: flex;
@@ -85,7 +85,7 @@ button {
   border-radius: 15px;
   margin: 24px 10px;
 }
-.fontionnement li::before {
+.fonctionnement li::before {
   counter-increment: listButton;
   content: counters(listButton, ".") " ";
   background-color: #9356DC;
@@ -100,10 +100,10 @@ button {
   align-items: center;
   left: -0.5rem;
 }
-.fontionnement li:hover {
+.fonctionnement li:hover {
   background-color: rgb(250, 232, 248);
 }
-.fontionnement i {
+.fonctionnement i {
   color: grey;
   padding: 0px 16px;
   font-size: 20px;
@@ -156,13 +156,17 @@ button {
 }
 .restaurants .article_content i:hover {
   font-weight: 600;
-  color: #9356DC;
+  color: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
 }
 
 footer {
   background-color: rgba(0, 0, 0, 0.7058823529);
   color: white;
   padding-left: 16px;
+}
+footer a{
+  color:white;
+  text-decoration: none;
 }
 footer h4 {
   font-family: Shrikhand;
@@ -175,6 +179,66 @@ footer ul {
 }
 footer li {
   padding-bottom: 10px;
+}
+
+@media (min-width: 500px) {
+  * {
+    font-size: 1.2rem;
+  }
+
+  .fonctionnement {
+    padding: 0px 12%;
+  }
+
+  .fontctionnementList {
+    display: flex;
+  }
+  .fontctionnementList li {
+    display: flex;
+    width: 30%;
+  }
+
+  .restaurants {
+    padding: 0px 12%;
+  }
+  .restaurants img {
+    height: 100%;
+    width: 70%;
+  }
+
+  .cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    overflow-wrap: anywhere;
+  }
+  .cards h2 {
+    width: 100%;
+  }
+  .cards .card {
+    width: 48%;
+    display: flex;
+    height: 300px;
+  }
+  .cards .new {
+    left: 20px;
+    right: initial;
+    font-size: 1rem;
+  }
+
+  footer {
+    padding: 10px 5%;
+  }
+  footer h4 {
+    padding: 0px;
+    margin: 0px;
+  }
+
+  footer ul {
+    display: flex;
+    justify-content: space-around;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
