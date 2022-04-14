@@ -164,8 +164,8 @@ footer {
   color: white;
   padding-left: 16px;
 }
-footer a{
-  color:white;
+footer a {
+  color: white;
   text-decoration: none;
 }
 footer h4 {
@@ -181,13 +181,13 @@ footer li {
   padding-bottom: 10px;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 772px) {
   * {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   .fonctionnement {
-    padding: 0px 12%;
+    padding: 0px 5%;
   }
 
   .fontctionnementList {
@@ -199,7 +199,7 @@ footer li {
   }
 
   .restaurants {
-    padding: 0px 12%;
+    padding: 0px 5%;
   }
   .restaurants img {
     height: 100%;
@@ -211,15 +211,73 @@ footer li {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    overflow-wrap: anywhere;
   }
   .cards h2 {
     width: 100%;
   }
   .cards .card {
-    width: 48%;
+    width: 45%;
     display: flex;
-    height: 300px;
+    height: 200px;
+  }
+  .cards .new {
+    left: 20px;
+    right: initial;
+    font-size: 1rem;
+  }
+
+  footer {
+    padding: 10px 5%;
+    padding-bottom: 500px;
+  }
+  footer h4 {
+    padding: 0px;
+    margin: 0px;
+  }
+
+  footer ul {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+@media (min-width: 1600px) {
+  * {
+    font-size: 1.2rem;
+  }
+
+  .fonctionnement {
+    padding: 0px 15%;
+  }
+
+  .fontctionnementList {
+    display: flex;
+  }
+  .fontctionnementList li {
+    display: flex;
+    width: 30%;
+  }
+
+  .restaurants {
+    padding: 0px 15%;
+  }
+  .restaurants img {
+    height: 100%;
+    width: 70%;
+  }
+
+  .cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .cards h2 {
+    width: 100%;
+  }
+  .cards .card {
+    width: 45%;
+    display: flex;
+    height: 400px;
   }
   .cards .new {
     left: 20px;
