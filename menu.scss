@@ -36,7 +36,7 @@ header{
         }i{
             font-size: 1.1rem;
             left:20px;
-            top:34px;
+            top:20px;
             position: absolute;
         }
     }
@@ -99,6 +99,7 @@ main{
             box-shadow: 0.25rem 0.25rem 1rem rgb(0 0 0 / 10%);
             overflow: hidden;
             display: flex;
+            cursor: pointer;
             strong{
                 display: flex;
                justify-content: flex-end;
@@ -113,17 +114,36 @@ main{
                 width:80%;
             }
             .menu_check{
-                background-color: #99e2d0;
-                margin: -1rem -5rem -1rem 5rem;
+                background-color: var(--tertiaire);
+                margin: -1rem -5rem -1rem 1rem;
                 width: 4rem;
+               
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 transition-duration: .5s;
+                display: none;
+                .icone_check{
+                    height: 26px;
+                    width: 26px;
+                    background-color:white;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 100px;
+                  
+                    i{
+                        color: var(--tertiaire);
+                    }
+                }
+                
             }
         }
-        .menu_item :hover, .menu_check{
-            margin-right: -1px;
+        .menu_item:hover .menu_check{
+            transform: translate(-30px);
+            transition-duration: 1s;
+            display: flex;
+           
         }
         
     }

@@ -39,7 +39,7 @@ header .header_logo a {
 header .header_logo i {
   font-size: 1.1rem;
   left: 20px;
-  top: 34px;
+  top: 20px;
   position: absolute;
 }
 header .img_logo {
@@ -99,6 +99,7 @@ main .menu .menu_item {
   box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
   overflow: hidden;
   display: flex;
+  cursor: pointer;
 }
 main .menu .menu_item strong {
   display: flex;
@@ -114,16 +115,31 @@ main .menu .menu_item .text_item {
   width: 80%;
 }
 main .menu .menu_item .menu_check {
-  background-color: #99e2d0;
-  margin: -1rem -5rem -1rem 5rem;
+  background-color: var(--tertiaire);
+  margin: -1rem -5rem -1rem 1rem;
   width: 4rem;
   display: flex;
   align-items: center;
   justify-content: center;
   transition-duration: 0.5s;
+  display: none;
 }
-main .menu .menu_item :hover, main .menu .menu_check {
-  margin-right: -1px;
+main .menu .menu_item .menu_check .icone_check {
+  height: 26px;
+  width: 26px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+}
+main .menu .menu_item .menu_check .icone_check i {
+  color: var(--tertiaire);
+}
+main .menu .menu_item:hover .menu_check {
+  transform: translate(-30px);
+  transition-duration: 1s;
+  display: flex;
 }
 
 footer {
