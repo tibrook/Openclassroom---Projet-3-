@@ -3,7 +3,9 @@
     --secondaire:#FF79DA ;
     --tertiaire: #99E2D0;
   }
-
+*{
+    box-sizing: border-box;
+}
 body{
     margin:0px;
     font-family: Roboto, sans-serif;
@@ -20,6 +22,7 @@ button {
     margin-right:auto;
     padding: 1rem 1.8rem;
     font-size: 1rem;
+    margin-bottom: 24px;
     border-radius: 100px;
     color: #fff;
     background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
@@ -58,27 +61,53 @@ main{
         margin-top: -80px;
         background-color: #f3f2f2;
         position: relative;
-        padding: 0px 20px;
-        height: 500px;
+        padding:20px;
+        
         .header_menu{
             
             padding-top: 5px;
             display: flex;
-            align-items: center;
+           
             justify-content: space-between;
             margin-right: 30px;
             h2{
                 font-size: 1.5rem;
+                margin-top:0px;
             }
-            i{
-                font-size: 1.5rem;;
+            
+            .coeur{
+                height: 2rem;
+                width: 2rem;
+                overflow: hidden;
+                display: inline-block;
+                position: relative;
+                i{
+                    position: absolute;
+                    text-align: center;
+                    left:0;
+                    font-size: 24px;
+                    width: 100%;
+                    
+                }
+                .coeurPlein{
+                    color:transparent;
+                    transition: all 350ms;
+                    &:hover{
+                        background: linear-gradient(to bottom left, #9356dc, #ff79da);
+                        transform: scale(1.1);
+                        -webkit-background-clip: text;
+                    }
+                }
+                
             }
+            
         }
+
         h3{
             text-transform: uppercase;
             font-size: 1.2rem;
             font-weight: 400;
-            margin: 0 0 10px 0;
+            margin: 18px 0 10px 0;
             padding-bottom:8px;
             position: relative;
         }
@@ -99,6 +128,7 @@ main{
             box-shadow: 0.25rem 0.25rem 1rem rgb(0 0 0 / 10%);
             overflow: hidden;
             display: flex;
+            justify-content: space-between;
             cursor: pointer;
             strong{
                 display: flex;
@@ -117,7 +147,6 @@ main{
                 background-color: var(--tertiaire);
                 margin: -1rem -5rem -1rem 1rem;
                 width: 4rem;
-               
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -131,28 +160,46 @@ main{
                     align-items: center;
                     justify-content: center;
                     border-radius: 100px;
-                  
+                    
                     i{
                         color: var(--tertiaire);
+                        transform: rotate(355deg);
+                        transition: transform 6000ms;
                     }
                 }
                 
             }
         }
         .menu_item:hover .menu_check{
-            transform: translate(-30px);
-            transition-duration: 1s;
             display: flex;
-           
+            transform: translateX(-68px);
+            transition: transform 4000ms ease-in-out;
+              
         }
-        
+        .menu_item:hover .prix_item{
+            transform: translateX(-58px);
+            transition: transform 1s ease-in-out;
+        }
+        .menu_item:hover .icone_check i{
+            transform: rotate(0deg);
+            transition: transform 1s;
+        }
     }
 }
 
 footer {
     background-color: rgba(0, 0, 0, 0.7058823529);
     color: white;
-    padding-left: 16px;
+    padding: 18px;
+
+    i{
+        padding-right: 6px;
+        font-size: 0.8rem;;
+    }
+    .couteaux{
+        padding-right:10px;
+        
+    }
     a{
         color:white;
         text-decoration: none;
@@ -160,7 +207,7 @@ footer {
     h4{
         font-family: Shrikhand;
         font-size: 1.3rem;
-        padding-top: 16px;
+        margin-top:0px;
         font-weight: 500;
         margin-bottom:15px;
     }

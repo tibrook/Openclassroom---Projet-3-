@@ -4,6 +4,10 @@
   --tertiaire: #99E2D0;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0px;
   font-family: Roboto, sans-serif;
@@ -22,6 +26,7 @@ button {
   margin-right: auto;
   padding: 1rem 1.8rem;
   font-size: 1rem;
+  margin-bottom: 24px;
   border-radius: 100px;
   color: #fff;
   background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
@@ -58,27 +63,46 @@ main .menu {
   margin-top: -80px;
   background-color: #f3f2f2;
   position: relative;
-  padding: 0px 20px;
-  height: 500px;
+  padding: 20px;
 }
 main .menu .header_menu {
   padding-top: 5px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
   margin-right: 30px;
 }
 main .menu .header_menu h2 {
   font-size: 1.5rem;
+  margin-top: 0px;
 }
-main .menu .header_menu i {
-  font-size: 1.5rem;
+main .menu .header_menu .coeur {
+  height: 2rem;
+  width: 2rem;
+  overflow: hidden;
+  display: inline-block;
+  position: relative;
+}
+main .menu .header_menu .coeur i {
+  position: absolute;
+  text-align: center;
+  left: 0;
+  font-size: 24px;
+  width: 100%;
+}
+main .menu .header_menu .coeur .coeurPlein {
+  color: transparent;
+  transition: all 350ms;
+}
+main .menu .header_menu .coeur .coeurPlein:hover {
+  background: linear-gradient(to bottom left, #9356dc, #ff79da);
+  transform: scale(1.1);
+  -webkit-background-clip: text;
 }
 main .menu h3 {
   text-transform: uppercase;
   font-size: 1.2rem;
   font-weight: 400;
-  margin: 0 0 10px 0;
+  margin: 18px 0 10px 0;
   padding-bottom: 8px;
   position: relative;
 }
@@ -99,6 +123,7 @@ main .menu .menu_item {
   box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
   overflow: hidden;
   display: flex;
+  justify-content: space-between;
   cursor: pointer;
 }
 main .menu .menu_item strong {
@@ -135,17 +160,34 @@ main .menu .menu_item .menu_check .icone_check {
 }
 main .menu .menu_item .menu_check .icone_check i {
   color: var(--tertiaire);
+  transform: rotate(355deg);
+  transition: transform 6000ms;
 }
 main .menu .menu_item:hover .menu_check {
-  transform: translate(-30px);
-  transition-duration: 1s;
   display: flex;
+  transform: translateX(-68px);
+  transition: transform 4000ms ease-in-out;
+}
+main .menu .menu_item:hover .prix_item {
+  transform: translateX(-58px);
+  transition: transform 1s ease-in-out;
+}
+main .menu .menu_item:hover .icone_check i {
+  transform: rotate(0deg);
+  transition: transform 1s;
 }
 
 footer {
   background-color: rgba(0, 0, 0, 0.7058823529);
   color: white;
-  padding-left: 16px;
+  padding: 18px;
+}
+footer i {
+  padding-right: 6px;
+  font-size: 0.8rem;
+}
+footer .couteaux {
+  padding-right: 10px;
 }
 footer a {
   color: white;
@@ -154,7 +196,7 @@ footer a {
 footer h4 {
   font-family: Shrikhand;
   font-size: 1.3rem;
-  padding-top: 16px;
+  margin-top: 0px;
   font-weight: 500;
   margin-bottom: 15px;
 }
