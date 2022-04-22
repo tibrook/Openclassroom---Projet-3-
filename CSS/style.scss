@@ -1,16 +1,14 @@
-:root {
-    --primaire: #9356DC ;
-    --secondaire:#FF79DA ;
-    --tertiaire: #99E2D0;
-}
 
+@import "couleurs.scss";
+@import "button.scss";
+@import "footer.scss";
 
 body{
     margin:0px;
     font-family: Roboto, sans-serif;
 }
 
-header{
+.flexLoca{
     padding: 0.5rem;
     box-shadow: 0 0 0.5rem #00000066;
     position: relative;
@@ -132,7 +130,7 @@ button{
         right:15px;
         top: 15px;
         padding: 7px 10px;
-        background: var(--tertiaire);
+        background: $tertiaire;
         color:green;
         border-radius: 2px;
         font-size: 0.8rem;
@@ -141,7 +139,15 @@ button{
         margin:18px 10px;
         color:black;
         
-        
+        .coeurPlein{
+            color:transparent;
+            transition: all 350ms;
+            &:hover{
+                background: linear-gradient(to bottom left, #9356dc, #ff79da);
+                transform: scale(1.1);
+                -webkit-background-clip: text;
+            }
+        }
         h3{
             margin: 0px;
         }
@@ -162,29 +168,7 @@ button{
       
     }
 }
-footer{
-    background-color: #000000b4;
-    color:white;
-    padding-left: 16px;
-    a{
-        color:white;
-        text-decoration: none;
-    }
-    h4{
-        font-family: Shrikhand;
-        font-size: 1.3rem;;
-        padding-top : 16px;
-        
-    }
-    ul{
-        list-style-type: none;
-        padding-left:0px;
-    }
-    li{
-        padding-bottom: 10px;
-        
-    }
-}
+
 @media (min-width: 772px){
     *{
         font-size: 1rem;
@@ -206,7 +190,8 @@ footer{
             padding: 0px 5%; 
             img{
                 height: 100%;
-                width: 68%;
+                width: 63%;
+                min-width: 63%;;
             }      
          }
         .cards {
@@ -230,8 +215,7 @@ footer{
             }
         }
         footer{
-            padding: 10px 5%;
-            padding-bottom:500px;
+            padding: 10px 5%;      
            
             h4{
                 padding: 0px;
@@ -245,26 +229,50 @@ footer{
 }
 @media (min-width: 1600px){
     *{
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
-    
+        .explainLoca{
+            display: flex;
+            justify-content: space-between;
+            padding: 0px 80px;
+        }
+        .exploration{
+            background-color: white;
+           
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            button{
+                padding: 1rem 0rem;
+                margin-bottom: 0px;
+                width:80%;
+            }
+        }
         .fonctionnement{
-            padding: 0px 15%;
+            
+            ol{
+                margin:0px;
+                padding:0px;
+            }
         }
         .fontctionnementList{
             display: flex;
+            flex-direction: column;
+            width: 600px;;
             li{
                 display: flex;
-                width: 30%;
+                width: 100%;
+                padding: 1.2rem;
                
             } 
         }
         
         .restaurants{
-            padding: 0px 15%; 
+            padding: 0px 80px; 
             img{
                 height: 100%;
-                width:70%;
+             
             }      
          }
         .cards {
@@ -279,7 +287,8 @@ footer{
             .card{
                 width: 45%;
                 display: flex;
-                height: 400px;;
+                margin-bottom: 50px;
+                
             }
             .new{
                 left:20px;

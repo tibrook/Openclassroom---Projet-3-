@@ -1,0 +1,237 @@
+button {
+  border: 0;
+  display: block;
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem 1.8rem;
+  font-size: 1rem;
+  margin-bottom: 24px;
+  border-radius: 100px;
+  color: #fff;
+  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  cursor: pointer;
+}
+
+footer {
+  background-color: rgba(0, 0, 0, 0.7058823529);
+  color: white;
+  padding: 18px;
+}
+footer i {
+  padding-right: 6px;
+  font-size: 0.8rem;
+}
+footer .couteaux {
+  padding-right: 10px;
+}
+footer a {
+  color: white;
+  text-decoration: none;
+}
+footer h4 {
+  font-family: Shrikhand;
+  font-size: 1.3rem;
+  margin-top: 0px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+footer ul {
+  list-style-type: none;
+  padding-left: 0px;
+}
+footer li {
+  padding-bottom: 10px;
+}
+
+.coeur {
+  height: 2rem;
+  width: 2rem;
+  overflow: hidden;
+  display: inline-block;
+  position: relative;
+}
+.coeur i {
+  position: absolute;
+  text-align: center;
+  left: 0;
+  font-size: 24px;
+  width: 100%;
+}
+.coeur .coeurPlein {
+  color: transparent;
+  transition: all 450ms;
+}
+.coeur .coeurPlein:hover {
+  background: linear-gradient(#9356DC, #FF79DA);
+  transform: scale(1.1);
+  -webkit-background-clip: text;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  font-family: Roboto, sans-serif;
+}
+
+h2 {
+  font-family: Shrikhand;
+  font-weight: lighter;
+}
+
+header .header_logo {
+  position: relative;
+}
+header .header_logo a {
+  position: relative;
+  text-decoration: none;
+  color: #000;
+}
+header .header_logo i {
+  font-size: 1.1rem;
+  left: 20px;
+  top: 20px;
+  position: absolute;
+}
+header .img_logo {
+  width: 150px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px 0px;
+}
+header .img_restaurant {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+main .container {
+  border-radius: 2rem 2rem 0 0;
+  margin-top: -80px;
+  background-color: #f3f2f2;
+  position: relative;
+  padding: 20px;
+}
+main .container .header_menu {
+  padding-top: 5px;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 30px;
+}
+main .container .header_menu h2 {
+  font-size: 1.5rem;
+  margin-top: 0px;
+}
+main .container h3 {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin: 18px 0 10px 0;
+  padding-bottom: 8px;
+  position: relative;
+}
+main .container h3::after {
+  content: "";
+  background-color: #99E2D0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 3rem;
+  height: 4px;
+}
+main .container .menu_item {
+  background-color: #fff;
+  padding: 12px;
+  margin-top: 20px;
+  border-radius: 1.1rem;
+  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+main .container .menu_item strong {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+main .container .menu_item .titre_item {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 1.15rem;
+}
+main .container .menu_item .text_item {
+  width: 80%;
+  text-overflow: ellipsis;
+}
+main .container .menu_item .menu_check {
+  background-color: #99E2D0;
+  margin: -1rem -5rem -1rem 1rem;
+  width: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: none;
+  transition-duration: 500ms;
+}
+main .container .menu_item .menu_check .icone_check {
+  height: 26px;
+  width: 26px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  transition-delay: 1s;
+  transform: rotate(-360deg);
+  transition-duration: 400ms;
+}
+main .container .menu_item .menu_check .icone_check .fas {
+  display: inline-block;
+}
+main .container .menu_item .menu_check .icone_check i {
+  color: #99E2D0;
+}
+main .container .menu_item:hover .prix_item {
+  margin-right: 60px;
+}
+main .container .menu_item:hover .menu_check {
+  transform: translateX(-68px);
+  transition: transform 400ms ease-in-out;
+  display: flex;
+}
+main .container .menu_item:hover .icone_check i {
+  transform: rotate(360deg);
+}
+
+@media (min-width: 772px) {
+  header .img_restaurant {
+    height: 350px;
+    object-fit: cover;
+  }
+}
+@media (min-width: 1300px) {
+  .header_menu h2 {
+    padding-left: 6px;
+  }
+
+  .menu {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .menu article {
+    width: 33%;
+  }
+
+  .menu_item {
+    width: 90%;
+    margin: 0px;
+  }
+}
+
+/*# sourceMappingURL=menu.css.map */

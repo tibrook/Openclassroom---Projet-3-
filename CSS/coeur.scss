@@ -1,0 +1,25 @@
+@import "couleurs.scss";
+.coeur{
+    height: 2rem;
+    width: 2rem;
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+    i{
+        position: absolute;
+        text-align: center;
+        left:0;
+        font-size: 24px;
+        width: 100%;
+        
+    }
+    .coeurPlein{
+        color:transparent;
+        transition: all 450ms;
+        &:hover{
+            background: linear-gradient( $primaire, $secondaire);
+            transform: scale(1.1);
+            -webkit-background-clip: text;
+        }
+    }
+}

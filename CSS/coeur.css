@@ -1,0 +1,25 @@
+.coeur {
+  height: 2rem;
+  width: 2rem;
+  overflow: hidden;
+  display: inline-block;
+  position: relative;
+}
+.coeur i {
+  position: absolute;
+  text-align: center;
+  left: 0;
+  font-size: 24px;
+  width: 100%;
+}
+.coeur .coeurPlein {
+  color: transparent;
+  transition: all 350ms;
+}
+.coeur .coeurPlein:hover {
+  background: linear-gradient(to bottom left, #9356DC, #FF79DA);
+  transform: scale(1.1);
+  -webkit-background-clip: text;
+}
+
+/*# sourceMappingURL=coeur.css.map */

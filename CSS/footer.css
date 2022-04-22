@@ -1,0 +1,32 @@
+footer {
+  background-color: rgba(0, 0, 0, 0.7058823529);
+  color: white;
+  padding: 18px;
+}
+footer i {
+  padding-right: 6px;
+  font-size: 0.8rem;
+}
+footer .couteaux {
+  padding-right: 10px;
+}
+footer a {
+  color: white;
+  text-decoration: none;
+}
+footer h4 {
+  font-family: Shrikhand;
+  font-size: 1.3rem;
+  margin-top: 0px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+footer ul {
+  list-style-type: none;
+  padding-left: 0px;
+}
+footer li {
+  padding-bottom: 10px;
+}
+
+/*# sourceMappingURL=footer.css.map */
