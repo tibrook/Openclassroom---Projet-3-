@@ -1,4 +1,4 @@
-
+@import "normalize.css";
 @import "couleurs.scss";
 @import "button.scss";
 @import "footer.scss";
@@ -115,7 +115,8 @@ main{
                 align-items: center;
                 justify-content: center;
                 display: none;
-                transition-duration: 500ms;
+                animation-delay: 0.5s;
+               
                 .icone_check{
                     height: 26px;
                     width: 26px;
