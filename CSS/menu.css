@@ -68,6 +68,10 @@ footer li {
   -webkit-background-clip: text;
 }
 
+/* 
+@function anim-delay($nth){
+    $result: 0.25s * $nth;
+} */
 * {
   box-sizing: border-box;
 }
@@ -153,6 +157,7 @@ main .container .menu_item {
   display: flex;
   justify-content: space-between;
   cursor: pointer;
+  animation: myAnim 1s ease 0s 1 normal forwards;
 }
 main .container .menu_item strong {
   display: flex;
@@ -207,7 +212,49 @@ main .container .menu_item:hover .menu_check {
 main .container .menu_item:hover .icone_check i {
   transform: rotate(360deg);
 }
+main .container .d0 {
+  animation-delay: 0s;
+}
+main .container .d1 {
+  animation-delay: 0.2s;
+}
+main .container .d2 {
+  animation-delay: 0.4s;
+}
+main .container .d3 {
+  animation-delay: 0.6s;
+}
+main .container .d4 {
+  animation-delay: 0.8s;
+}
+main .container .d5 {
+  animation-delay: 1s;
+}
+main .container .d6 {
+  animation-delay: 1.2s;
+}
+main .container .d7 {
+  animation-delay: 1.4s;
+}
+main .container .d8 {
+  animation-delay: 1.6s;
+}
+main .container .d9 {
+  animation-delay: 1.8s;
+}
 
+@keyframes myAnim {
+  0% {
+    opacity: 0;
+    transform: rotateX(70deg);
+    transform-origin: top;
+  }
+  100% {
+    opacity: 1;
+    transform: rotateX(0deg);
+    transform-origin: top;
+  }
+}
 @media (min-width: 772px) {
   header .img_restaurant {
     height: 350px;

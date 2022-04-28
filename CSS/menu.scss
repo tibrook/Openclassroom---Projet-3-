@@ -3,6 +3,11 @@
 @import "button.scss";
 @import "footer.scss";
 @import "coeur.scss";
+/* 
+@function anim-delay($nth){
+    $result: 0.25s * $nth;
+} */
+
 *{
     box-sizing: border-box;
 }
@@ -87,9 +92,7 @@ main{
             display: flex;
             justify-content: space-between;
             cursor: pointer;
-            .prix_item{
-                
-            }
+            animation: myAnim 1s ease 0s 1 normal forwards;
             strong{
                 display: flex;
                justify-content: flex-end;
@@ -148,7 +151,27 @@ main{
                 }
             }
         }
+        @for $i from 0 to 10 {
+            .d#{$i} {
+              animation-delay:  #{$i*0.2}s;
+            }
+        }
+        
     }
+}
+
+@keyframes myAnim {
+	0% {
+		opacity: 0;
+		transform: rotateX(70deg);
+		transform-origin: top;
+	}
+
+	100% {
+		opacity: 1;
+		transform: rotateX(0deg);
+		transform-origin: top;
+	}
 }
 @media (min-width: 772px){
     header{
