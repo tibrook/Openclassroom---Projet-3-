@@ -1,12 +1,11 @@
-@import "normalize.css";
-@import "couleurs.scss";
-@import "button.scss";
-@import "footer.scss";
-@import "coeur.scss";
-/* 
-@function anim-delay($nth){
-    $result: 0.25s * $nth;
-} */
+@import "keyframes/_keyframes-apparition-cards.scss";
+@import "components/normalize.css";
+@import "components/couleurs.scss";
+@import "components/button.scss";
+@import "components/footer.scss";
+@import "components/coeur.scss";
+@import "keyframes/_keyframes-hover.scss";
+
 
 *{
     box-sizing: border-box;
@@ -19,10 +18,15 @@ h2{
     font-family: Shrikhand;
     font-weight: lighter;
 }
-
+.text-ellipsis{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+}
 header{
     .header_logo{
-        position:relative;
+        display: flex;
         a{
             position: relative;
             text-decoration: none;
@@ -59,7 +63,6 @@ main{
             padding-top: 5px;
             display: flex;
             justify-content: space-between;
-            margin-right: 30px;
             h2{
                 font-size: 1.5rem;
                 margin-top:0px;
@@ -92,7 +95,7 @@ main{
             display: flex;
             justify-content: space-between;
             cursor: pointer;
-            animation: myAnim 1s ease 0s 1 normal forwards;
+           
             strong{
                 display: flex;
                justify-content: flex-end;
@@ -101,11 +104,17 @@ main{
             .titre_item{
                 display: block;
                 margin-bottom: 8px;
-                font-size: 1.15rem;
+                font-size: 0.98rem;
             }
             .text_item{
                 width:80%;
                 text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+                span{
+                    color:$span_menu;
+                    font-size: 0.85rem;
+                }
             }
             .menu_check{
                 background-color: $tertiaire;
@@ -114,9 +123,6 @@ main{
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                display: none;
-                animation-delay: 0.5s;
-               
                 .icone_check{
                     height: 26px;
                     width: 26px;
@@ -125,43 +131,21 @@ main{
                     align-items: center;
                     justify-content: center;
                     border-radius: 100px;
-                    transition-delay: 1s;
-                    transform: rotate(-360deg);
-                    transition-duration: 400ms;
                     .fas{
                         display: inline-block;
-                        
                     }
                     i{
                         color: $tertiaire;
                     }
                 }
-                
-            }
-            
-        }
-        @for $i from 0 to 10 {
-            .d#{$i} {
-              animation-delay:  #{$i*0.2}s;
-            }
-        }
-        
+            }  
+        }  
     }
 }
-
-@keyframes myAnim {
-	0% {
-		opacity: 0;
-		transform: rotateX(70deg);
-		transform-origin: top;
-	}
-
-	100% {
-		opacity: 1;
-		transform: rotateX(0deg);
-		transform-origin: top;
-	}
+button{
+    margin-top:36px;
 }
+
 @media (min-width: 772px){
     header{
         .img_restaurant{

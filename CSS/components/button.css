@@ -1,7 +1,6 @@
 button {
   border: 0;
   display: block;
-  margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
   padding: 1rem 1.8rem;
@@ -11,6 +10,10 @@ button {
   color: #fff;
   background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
   cursor: pointer;
+}
+button:hover {
+  background: linear-gradient(#ff93e1, #a16be0);
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
 }
 
 /*# sourceMappingURL=button.css.map */

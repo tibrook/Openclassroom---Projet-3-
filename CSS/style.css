@@ -1,8 +1,61 @@
-@import "normalize.css";
+@import "components/normalize.css";
+@keyframes loading-spinner {
+  0% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 1;
+  }
+}
+@keyframes visibility-hid {
+  0% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+.body-invisible {
+  animation: visibility-hid 1s linear;
+}
+
+#visible {
+  visibility: visible;
+}
+
+.loader-ohmyfood {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 150px;
+  width: 100%;
+  height: 100%;
+  animation: loading-spinner 1s forwards;
+}
+.loader-ohmyfood i {
+  color: transparent;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(#9356DC, #FF79DA 95%);
+  animation: spinner 1s ease-in-out forwards;
+}
+
 button {
   border: 0;
   display: block;
-  margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
   padding: 1rem 1.8rem;
@@ -12,6 +65,10 @@ button {
   color: #fff;
   background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
   cursor: pointer;
+}
+button:hover {
+  background: linear-gradient(#ff93e1, #a16be0);
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
 }
 
 footer {
@@ -31,7 +88,7 @@ footer a {
   text-decoration: none;
 }
 footer h4 {
-  font-family: Shrikhand;
+  font-family: "Shrikhand";
   font-size: 1.3rem;
   margin-top: 0px;
   font-weight: 500;
@@ -45,14 +102,35 @@ footer li {
   padding-bottom: 10px;
 }
 
+@media (min-width: 772px) {
+  footer {
+    padding: 30px 5%;
+    padding-top: 20px;
+  }
+  footer h4 {
+    padding: 0px;
+    margin: 0px;
+  }
+
+  footer ul {
+    display: flex;
+    justify-content: space-around;
+  }
+}
 body {
   margin: 0px;
   font-family: Roboto, sans-serif;
 }
 
+h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* HEADER */
 .flexLoca {
   padding: 0.5rem;
-  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.4);
+  box-shadow: 0 6px 8px 1px rgba(0, 0, 0, 0.4);
   position: relative;
 }
 .flexLoca img {
@@ -69,15 +147,16 @@ body {
   padding: 1.25rem 1rem;
   background-color: #e5e2e2;
   font-size: 1rem;
+  opacity: 0.7;
 }
 .loca i {
   margin-right: 15px;
 }
 .loca span {
-  opacity: 0.8;
   font-weight: 700;
 }
 
+/* explainLoca */
 .exploration {
   padding: 15px 36px;
   text-align: center;
@@ -87,6 +166,7 @@ body {
   font-weight: 700;
   font-size: 1.5em;
   margin-bottom: 15px;
+  padding: 0px 15px;
 }
 .exploration p {
   opacity: 0.5;
@@ -94,16 +174,6 @@ body {
 }
 .exploration button {
   margin-bottom: 36px;
-}
-
-button {
-  border: 0;
-  padding: 1rem 1.5rem;
-  font-size: 1rem;
-  border-radius: 100px;
-  color: #fff;
-  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
-  cursor: pointer;
 }
 
 .fonctionnement {
@@ -119,12 +189,12 @@ button {
   background: #f6f6f6;
   display: flex;
   padding: 1.5rem;
-  display: flex;
   align-items: center;
   box-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.1333333333);
   position: relative;
   border-radius: 15px;
   margin: 24px 10px;
+  font-weight: 500;
 }
 .fonctionnement li::before {
   counter-increment: listButton;
@@ -142,7 +212,10 @@ button {
   left: -0.5rem;
 }
 .fonctionnement li:hover {
-  background-color: rgb(250, 232, 248);
+  background-color: #F7F1FF;
+}
+.fonctionnement li:hover i {
+  color: #9356DC;
 }
 .fonctionnement i {
   color: grey;
@@ -197,6 +270,7 @@ button {
 }
 .restaurants .article_content p {
   margin: 6px 0px;
+  opacity: 0.8;
 }
 .restaurants .article_content i {
   font-size: 32px;
@@ -210,12 +284,8 @@ button {
 }
 
 @media (min-width: 772px) {
-  * {
-    font-size: 1rem;
-  }
-
   .fonctionnement {
-    padding: 0px 5%;
+    padding: 30px 5%;
   }
 
   .fontctionnementList {
@@ -240,9 +310,11 @@ button {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    padding-bottom: 30px;
   }
   .cards h2 {
     width: 100%;
+    padding-bottom: 30px;
   }
   .cards .card {
     width: 45%;
@@ -254,25 +326,8 @@ button {
     right: initial;
     font-size: 1rem;
   }
-
-  footer {
-    padding: 10px 5%;
-  }
-  footer h4 {
-    padding: 0px;
-    margin: 0px;
-  }
-
-  footer ul {
-    display: flex;
-    justify-content: space-around;
-  }
 }
 @media (min-width: 1600px) {
-  * {
-    font-size: 1.1rem;
-  }
-
   .explainLoca {
     display: flex;
     justify-content: space-between;
@@ -293,16 +348,13 @@ button {
   }
 
   .fonctionnement ol {
-    margin: 0px;
-    padding: 0px;
-  }
-
-  .fontctionnementList {
     display: flex;
     flex-direction: column;
     width: 600px;
+    margin: 0px;
+    padding: 0px;
   }
-  .fontctionnementList li {
+  .fonctionnement ol li {
     display: flex;
     width: 100%;
     padding: 1.2rem;
@@ -311,41 +363,9 @@ button {
   .restaurants {
     padding: 0px 80px;
   }
-  .restaurants img {
-    height: 100%;
-  }
 
-  .cards {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-  .cards h2 {
-    width: 100%;
-  }
-  .cards .card {
-    width: 45%;
-    display: flex;
+  .card {
     margin-bottom: 50px;
-  }
-  .cards .new {
-    left: 20px;
-    right: initial;
-    font-size: 1rem;
-  }
-
-  footer {
-    padding: 10px 5%;
-  }
-  footer h4 {
-    padding: 0px;
-    margin: 0px;
-  }
-
-  footer ul {
-    display: flex;
-    justify-content: space-around;
   }
 }
 

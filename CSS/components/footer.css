@@ -15,7 +15,7 @@ footer a {
   text-decoration: none;
 }
 footer h4 {
-  font-family: Shrikhand;
+  font-family: "Shrikhand";
   font-size: 1.3rem;
   margin-top: 0px;
   font-weight: 500;
@@ -27,6 +27,22 @@ footer ul {
 }
 footer li {
   padding-bottom: 10px;
+}
+
+@media (min-width: 772px) {
+  footer {
+    padding: 30px 5%;
+    padding-top: 20px;
+  }
+  footer h4 {
+    padding: 0px;
+    margin: 0px;
+  }
+
+  footer ul {
+    display: flex;
+    justify-content: space-around;
+  }
 }
 
 /*# sourceMappingURL=footer.css.map */

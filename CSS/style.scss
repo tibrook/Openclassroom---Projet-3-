@@ -1,18 +1,24 @@
-@import "normalize.css";
-@import "couleurs.scss";
-@import "button.scss";
-@import "footer.scss";
+@import "keyframes/_keyframes-loading-spinner.scss";
+@import "components/normalize.css";
+@import "components/couleurs.scss";
+@import "components/button.scss";
+@import "components/footer.scss";
+
 
 body{
     margin:0px;
     font-family: Roboto, sans-serif;
 }
+h2{
+    font-size: 1.5rem;
+    font-weight:700;
+}
+                    /* HEADER */
 
 .flexLoca{
     padding: 0.5rem;
-    box-shadow: 0 0 0.5rem #00000066;
+    box-shadow:0 6px 8px 1px #00000066;
     position: relative;
-    
     img{
         width: 150px;
         display: block;
@@ -27,15 +33,17 @@ body{
     padding: 1.25rem 1rem;
     background-color: #e5e2e2;
     font-size: 1rem;
+    opacity: 0.7;
     i{
         margin-right: 15px;
     }
     span{
-        opacity: 0.8;
+       
         font-weight: 700;
         
     }
 }
+                    /* explainLoca */
 .exploration{
     padding: 15px 36px;
     text-align: center;
@@ -44,6 +52,7 @@ body{
         font-weight: 700;
         font-size: 1.5em;
         margin-bottom:15px;
+        padding: 0px 15px;
     }
     p{
         opacity: 0.5;
@@ -53,16 +62,6 @@ body{
         margin-bottom:36px;
     }
 }
-button{
-    border: 0;
-    padding: 1rem 1.5rem;
-    font-size: 1rem;
-    border-radius: 100px;
-    color: #fff;
-    background-image: linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9));
-    cursor: pointer;
-}
-
 .fonctionnement{
     padding: 1rem;
     font-weight: bold;
@@ -75,12 +74,12 @@ button{
         background: #f6f6f6;
         display:flex;
         padding: 1.5rem;
-        display: flex;
         align-items: center;
         box-shadow: 0.25rem 0.25rem 0.5rem #00000022;
         position: relative;
         border-radius: 15px;
         margin: 24px 10px;
+        font-weight: 500;
     }
     li::before{
         counter-increment: listButton;
@@ -98,7 +97,10 @@ button{
         left: -0.5rem;;
     }
     li:hover{
-        background-color: rgb(250, 232, 248);
+        background-color: #F7F1FF;
+        i{
+            color: #9356DC;
+        }
     }
     i{
         color:grey;
@@ -152,7 +154,8 @@ button{
             margin: 0px;
         }
         p{
-            margin: 6px 0px;;
+            margin: 6px 0px;
+            opacity: 0.8;
         }
         i{
             font-size: 32px;
@@ -168,24 +171,17 @@ button{
       
     }
 }
-
 @media (min-width: 772px){
-    *{
-        font-size: 1rem;
-    }
-    
         .fonctionnement{
-            padding: 0px 5%;
+            padding: 30px 5%;
         }
         .fontctionnementList{
             display: flex;
             li{
                 display: flex;
                 width: 30%;
-               
             } 
         }
-        
         .restaurants{
             padding: 0px 5%; 
             img{
@@ -199,10 +195,12 @@ button{
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: space-between;
-           
+            padding-bottom:30px;
             h2{
                 width:100%;
+                padding-bottom: 30px;;
             }
+            
             .card{
                 width: 45%;
                 display: flex;
@@ -214,23 +212,9 @@ button{
                 font-size: 1rem;;
             }
         }
-        footer{
-            padding: 10px 5%;      
-           
-            h4{
-                padding: 0px;
-                margin:0px;
-            }
-        }
-        footer ul{
-            display: flex;
-            justify-content: space-around;
-        }
 }
 @media (min-width: 1600px){
-    *{
-        font-size: 1.1rem;
-    }
+ 
         .explainLoca{
             display: flex;
             justify-content: space-between;
@@ -250,61 +234,23 @@ button{
             }
         }
         .fonctionnement{
-            
             ol{
+                display: flex;
+                flex-direction: column;
+                width: 600px;
                 margin:0px;
                 padding:0px;
+                li{
+                    display: flex;
+                    width: 100%;
+                    padding: 1.2rem;
+                } 
             }
         }
-        .fontctionnementList{
-            display: flex;
-            flex-direction: column;
-            width: 600px;;
-            li{
-                display: flex;
-                width: 100%;
-                padding: 1.2rem;
-               
-            } 
-        }
-        
         .restaurants{
             padding: 0px 80px; 
-            img{
-                height: 100%;
-             
-            }      
          }
-        .cards {
-            display:flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-between;
-           
-            h2{
-                width:100%;
-            }
-            .card{
-                width: 45%;
-                display: flex;
-                margin-bottom: 50px;
-                
-            }
-            .new{
-                left:20px;
-               right: initial;
-                font-size: 1rem;;
-            }
-        }
-        footer{
-            padding: 10px 5%;
-            h4{
-                padding: 0px;
-                margin:0px;
-            }
-        }
-        footer ul{
-            display: flex;
-            justify-content: space-around;
+        .card{
+                margin-bottom: 50px;  
         }
 }

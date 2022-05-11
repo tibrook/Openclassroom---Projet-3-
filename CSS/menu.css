@@ -1,8 +1,77 @@
-@import "normalize.css";
+@import "components/normalize.css";
+@keyframes card-apparition {
+  0% {
+    transform: translateY(10%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+.d0 {
+  animation: card-apparition 1s ease-in-out forwards;
+  opacity: 0;
+  animation-delay: 0s;
+}
+
+.d1 {
+  animation: card-apparition 1s ease-in-out forwards;
+  opacity: 0;
+  animation-delay: 0.2s;
+}
+
+.d2 {
+  animation: card-apparition 1s ease-in-out forwards;
+  opacity: 0;
+  animation-delay: 0.4s;
+}
+
+.d3 {
+  animation: card-apparition 1s ease-in-out forwards;
+  opacity: 0;
+  animation-delay: 0.6s;
+}
+
+.d4 {
+  animation: card-apparition 1s ease-in-out forwards;
+  opacity: 0;
+  animation-delay: 0.8s;
+}
+
+.d5 {
+  animation: card-apparition 1s ease-in-out forwards;
+  opacity: 0;
+  animation-delay: 1s;
+}
+
+.d6 {
+  animation: card-apparition 1s ease-in-out forwards;
+  opacity: 0;
+  animation-delay: 1.2s;
+}
+
+.d7 {
+  animation: card-apparition 1s ease-in-out forwards;
+  opacity: 0;
+  animation-delay: 1.4s;
+}
+
+.d8 {
+  animation: card-apparition 1s ease-in-out forwards;
+  opacity: 0;
+  animation-delay: 1.6s;
+}
+
+.d9 {
+  animation: card-apparition 1s ease-in-out forwards;
+  opacity: 0;
+  animation-delay: 1.8s;
+}
+
 button {
   border: 0;
   display: block;
-  margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
   padding: 1rem 1.8rem;
@@ -12,6 +81,10 @@ button {
   color: #fff;
   background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
   cursor: pointer;
+}
+button:hover {
+  background: linear-gradient(#ff93e1, #a16be0);
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.3);
 }
 
 footer {
@@ -31,7 +104,7 @@ footer a {
   text-decoration: none;
 }
 footer h4 {
-  font-family: Shrikhand;
+  font-family: "Shrikhand";
   font-size: 1.3rem;
   margin-top: 0px;
   font-weight: 500;
@@ -45,6 +118,21 @@ footer li {
   padding-bottom: 10px;
 }
 
+@media (min-width: 772px) {
+  footer {
+    padding: 30px 5%;
+    padding-top: 20px;
+  }
+  footer h4 {
+    padding: 0px;
+    margin: 0px;
+  }
+
+  footer ul {
+    display: flex;
+    justify-content: space-around;
+  }
+}
 .coeur {
   height: 2rem;
   width: 2rem;
@@ -69,10 +157,72 @@ footer li {
   -webkit-background-clip: text;
 }
 
-/* 
-@function anim-delay($nth){
-    $result: 0.25s * $nth;
-} */
+@keyframes progress-green-box {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-68px);
+  }
+}
+@keyframes check-rotation {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes glissement-text {
+  0% {
+    margin-right: 0px;
+  }
+  100% {
+    margin-right: 60px;
+  }
+}
+@keyframes glissement-ellipsis {
+  0% {
+    width: 300px;
+  }
+  40% {
+    width: 260px;
+  }
+  80% {
+    width: 230px;
+  }
+  100% {
+    width: 200px;
+  }
+}
+.menu_item:hover .text-ellipsis {
+  animation: glissement-ellipsis 0.4s linear forwards;
+}
+.menu_item:hover .prix_item {
+  animation: glissement-text 0.4s linear forwards;
+  animation-play-state: running;
+}
+.menu_item:hover .menu_check {
+  opacity: 1;
+  animation: progress-green-box 0.4s linear forwards;
+  display: flex;
+}
+.menu_item:hover .menu_check i {
+  animation: check-rotation 0.4s linear forwards;
+}
+
+.text-ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 300px;
+}
+
+@media (min-width: 772px) {
+  .menu_item:hover .text-ellipsis {
+    animation: none !important;
+  }
+}
 * {
   box-sizing: border-box;
 }
@@ -87,8 +237,15 @@ h2 {
   font-weight: lighter;
 }
 
+.text-ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  display: block;
+}
+
 header .header_logo {
-  position: relative;
+  display: flex;
 }
 header .header_logo a {
   position: relative;
@@ -125,7 +282,6 @@ main .container .header_menu {
   padding-top: 5px;
   display: flex;
   justify-content: space-between;
-  margin-right: 30px;
 }
 main .container .header_menu h2 {
   font-size: 1.5rem;
@@ -158,7 +314,6 @@ main .container .menu_item {
   display: flex;
   justify-content: space-between;
   cursor: pointer;
-  animation: myAnim 1s ease 0s 1 normal forwards;
 }
 main .container .menu_item strong {
   display: flex;
@@ -168,11 +323,17 @@ main .container .menu_item strong {
 main .container .menu_item .titre_item {
   display: block;
   margin-bottom: 8px;
-  font-size: 1.15rem;
+  font-size: 0.98rem;
 }
 main .container .menu_item .text_item {
   width: 80%;
   text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+main .container .menu_item .text_item span {
+  color: #5A5A5A;
+  font-size: 0.85rem;
 }
 main .container .menu_item .menu_check {
   background-color: #99E2D0;
@@ -181,8 +342,6 @@ main .container .menu_item .menu_check {
   display: flex;
   align-items: center;
   justify-content: center;
-  display: none;
-  animation-delay: 0.5s;
 }
 main .container .menu_item .menu_check .icone_check {
   height: 26px;
@@ -192,9 +351,6 @@ main .container .menu_item .menu_check .icone_check {
   align-items: center;
   justify-content: center;
   border-radius: 100px;
-  transition-delay: 1s;
-  transform: rotate(-360deg);
-  transition-duration: 400ms;
 }
 main .container .menu_item .menu_check .icone_check .fas {
   display: inline-block;
@@ -202,60 +358,11 @@ main .container .menu_item .menu_check .icone_check .fas {
 main .container .menu_item .menu_check .icone_check i {
   color: #99E2D0;
 }
-main .container .menu_item:hover .prix_item {
-  margin-right: 60px;
-}
-main .container .menu_item:hover .menu_check {
-  transform: translateX(-68px);
-  transition: transform 400ms ease-in-out;
-  display: flex;
-}
-main .container .menu_item:hover .icone_check i {
-  transform: rotate(360deg);
-}
-main .container .d0 {
-  animation-delay: 0s;
-}
-main .container .d1 {
-  animation-delay: 0.2s;
-}
-main .container .d2 {
-  animation-delay: 0.4s;
-}
-main .container .d3 {
-  animation-delay: 0.6s;
-}
-main .container .d4 {
-  animation-delay: 0.8s;
-}
-main .container .d5 {
-  animation-delay: 1s;
-}
-main .container .d6 {
-  animation-delay: 1.2s;
-}
-main .container .d7 {
-  animation-delay: 1.4s;
-}
-main .container .d8 {
-  animation-delay: 1.6s;
-}
-main .container .d9 {
-  animation-delay: 1.8s;
+
+button {
+  margin-top: 36px;
 }
 
-@keyframes myAnim {
-  0% {
-    opacity: 0;
-    transform: rotateX(70deg);
-    transform-origin: top;
-  }
-  100% {
-    opacity: 1;
-    transform: rotateX(0deg);
-    transform-origin: top;
-  }
-}
 @media (min-width: 772px) {
   header .img_restaurant {
     height: 350px;
