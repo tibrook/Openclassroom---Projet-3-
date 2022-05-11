@@ -138,19 +138,7 @@ main{
                 }
                 
             }
-            &:hover{
-                .prix_item{
-                    margin-right:60px;
-                }
-                .menu_check{
-                    transform: translateX(-68px);  
-                    transition: transform 400ms ease-in-out;
-                    display: flex;
-                }
-                .icone_check i{  
-                    transform: rotate(360deg);  
-                }
-            }
+            
         }
         @for $i from 0 to 10 {
             .d#{$i} {
