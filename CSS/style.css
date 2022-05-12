@@ -117,6 +117,16 @@ footer li {
     justify-content: space-around;
   }
 }
+.coeurPlein {
+  color: transparent;
+  transition: all 450ms;
+}
+.coeurPlein:hover {
+  background: linear-gradient(#9356DC, #FF79DA);
+  transform: scale(1.1);
+  -webkit-background-clip: text;
+}
+
 body {
   margin: 0px;
   font-family: Roboto, sans-serif;
@@ -256,15 +266,6 @@ h2 {
   margin: 18px 10px;
   color: black;
 }
-.restaurants .article_content .coeurPlein {
-  color: transparent;
-  transition: all 350ms;
-}
-.restaurants .article_content .coeurPlein:hover {
-  background: linear-gradient(to bottom left, #9356dc, #ff79da);
-  transform: scale(1.1);
-  -webkit-background-clip: text;
-}
 .restaurants .article_content h3 {
   margin: 0px;
 }
@@ -277,10 +278,6 @@ h2 {
   position: absolute;
   bottom: 30px;
   right: 16px;
-}
-.restaurants .article_content i:hover {
-  font-weight: 600;
-  color: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
 }
 
 @media (min-width: 772px) {

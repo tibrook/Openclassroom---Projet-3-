@@ -3,7 +3,7 @@
 @import "components/couleurs.scss";
 @import "components/button.scss";
 @import "components/footer.scss";
-
+@import "components/coeur.scss";
 
 body{
     margin:0px;
@@ -38,9 +38,7 @@ h2{
         margin-right: 15px;
     }
     span{
-       
         font-weight: 700;
-        
     }
 }
                     /* explainLoca */
@@ -140,16 +138,6 @@ h2{
     .article_content{
         margin:18px 10px;
         color:black;
-        
-        .coeurPlein{
-            color:transparent;
-            transition: all 350ms;
-            &:hover{
-                background: linear-gradient(to bottom left, #9356dc, #ff79da);
-                transform: scale(1.1);
-                -webkit-background-clip: text;
-            }
-        }
         h3{
             margin: 0px;
         }
@@ -162,13 +150,7 @@ h2{
             position: absolute;
             bottom:30px;
             right: 16px;
-           
-        }
-        i:hover{
-            font-weight: 600;
-            color: linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9));
-        }
-      
+        } 
     }
 }
 @media (min-width: 772px){
