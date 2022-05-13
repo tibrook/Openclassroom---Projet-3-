@@ -160,6 +160,11 @@ footer li {
   -webkit-background-clip: text;
 }
 
+@media (min-width: 1300px) {
+  .coeur {
+    margin-right: 46px;
+  }
+}
 @keyframes progress-green-box {
   0% {
     transform: translateX(0);
