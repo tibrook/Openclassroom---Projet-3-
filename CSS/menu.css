@@ -373,7 +373,7 @@ button {
 
 @media (min-width: 772px) {
   header .img_restaurant {
-    height: 350px;
+    height: 450px;
     object-fit: cover;
   }
 }
