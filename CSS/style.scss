@@ -5,6 +5,9 @@
 @import "components/footer.scss";
 @import "components/coeur.scss";
 
+*{
+    box-sizing: border-box;
+}
 body{
     margin:0px;
     font-family: Roboto, sans-serif;
