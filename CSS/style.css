@@ -1,13 +1,13 @@
 @import "components/normalize.css";
 @keyframes loading-spinner {
   0% {
-    opacity: 1;
+    transform: scale(1);
   }
   80% {
-    opacity: 1;
+    transform: scale(1);
   }
   100% {
-    opacity: 0;
+    transform: scale(0);
   }
 }
 @keyframes spinner {
